@@ -8,12 +8,10 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import StarOverlay from './components/StarOverlay';
 
 export default function App () {
     return (
         <>
-            <StarOverlay />
             <CustomCursor />
 
             <Router>
