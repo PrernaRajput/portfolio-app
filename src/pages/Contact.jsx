@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 export default function Contact () {
     return (
-        <section className="max-w-4xl mx-auto px-6 py-16 text-gray-300">
+        <section className="max-w-4xl mx-auto px-6 py-16 text-coolGray">
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-3xl font-bold text-blue-400 mb-6"
+                className="text-3xl font-bold text-ashGray mb-6"
             >
                 Contact
             </motion.h2>
@@ -27,37 +27,39 @@ export default function Contact () {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4 mt-6"
             >
+                {/* Email Button */}
                 <a
                     href="mailto:prerna.rajput.dev@gmail.com"
-                    className="bg-blue-400 text-black px-6 py-3 rounded-md 
-                     hover:bg-teal-500 hover:text-white shadow-md 
-                     hover:shadow-blue-400/40 transition duration-300 ease-in-out text-center"
+                    className="bg-spaceCadet text-antiFlashWhite px-6 py-3 rounded-md 
+                     hover:bg-ashGray hover:text-gunmetal shadow-md 
+                     hover:shadow-ashGray/30 transition duration-300 ease-in-out text-center"
                 >
                     Say Hello!
                 </a>
 
+                {/* WhatsApp Text Button */}
                 <a
                     href="https://wa.me/919354822230"
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-blue-300 text-black px-6 py-3 rounded-md 
-                     hover:bg-teal-600 hover:text-white shadow-md 
-                     hover:shadow-green-400/40 transition duration-300 ease-in-out"
+                    className="bg-gunmetal text-antiFlashWhite px-6 py-3 rounded-md 
+                     hover:bg-coolGray hover:text-black shadow-md 
+                     hover:shadow-coolGray/30 transition duration-300 ease-in-out text-center"
                 >
                     Contact via Text
                 </a>
 
+                {/* View Résumé Button */}
                 <a
                     href="/assets/Prerna-Rajput-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-200 text-black px-6 py-3 rounded-md 
-                    hover:bg-teal-700 hover:text-white shadow-md 
-                    hover:shadow-green-400/40 transition duration-300 ease-in-out"
+                    className="bg-ashGray text-gunmetal px-6 py-3 rounded-md 
+                     hover:bg-coolGray hover:text-antiFlashWhite shadow-md 
+                     hover:shadow-ashGray/30 transition duration-300 ease-in-out text-center"
                 >
-                    View Résumé
+                    View Resume
                 </a>
-
             </motion.div>
         </section>
     );

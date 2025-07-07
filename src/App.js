@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,11 +13,13 @@ import StarOverlay from './components/StarOverlay';
 export default function App () {
     return (
         <>
-            <StarOverlay/>
+            <StarOverlay />
             <CustomCursor />
+
             <Router>
-                <div className="flex flex-col min-h-screen ">
+                <div className="flex flex-col min-h-screen bg-gunmetal text-antiFlashWhite relative z-10">
                     <Navbar />
+
                     <main className="flex-grow">
                         <Routes>
                             <Route path="/" element={<Home />} />
@@ -29,10 +30,10 @@ export default function App () {
                             <Route path="/contact" element={<Contact />} />
                         </Routes>
                     </main>
+
                     <Footer />
                 </div>
             </Router>
         </>
     );
 }
-

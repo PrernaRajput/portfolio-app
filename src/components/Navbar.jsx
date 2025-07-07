@@ -1,30 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Experience', path: '/experience' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Skills', path: '/skills' },
-  { name: 'Contact', path: '/contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Experience', path: '/experience' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Skills', path: '/skills' },
+    { name: 'Contact', path: '/contact' },
 ];
 
-export default function Navbar() {
-  return (
-    <header className="bg-black text-white sticky top-0 z-50 shadow-md">
-      <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="font-bold text-teal-500 text-lg">Prerna Rajput</div>
-        <ul className="flex space-x-6 text-sm">
-          {navItems.map(item => (
-            <li key={item.path}>
-              <Link to={item.path} className="hover:text-teal-500">
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
+export default function Navbar () {
+    const location = useLocation();
+
+    return (
+        <header className="bg-spaceCadet text-antiFlashWhite sticky top-0 z-50 shadow-md border-b border-gunmetal backdrop-blur-md bg-opacity-95">
+            <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <div className="font-bold text-ashGray text-lg tracking-wide">
+                    Prerna Rajput
+                </div>
+
+                <ul className="flex space-x-6 text-sm font-medium">
+                    {navItems.map( ( item ) => (
+                        <li key={item.path}>
+                            <Link
+                                to={item.path}
+                                className={`transition-colors duration-200 ${location.pathname === item.path
+                                        ? 'text-ashGray'
+                                        : 'text-coolGray hover:text-ashGray'
+                                    }`}
+                            >
+                                {item.name}
+                            </Link>
+                        </li>
+                    ) )}
+                </ul>
+            </nav>
+        </header>
+    );
 }
