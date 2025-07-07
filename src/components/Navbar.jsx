@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
     { name: 'Home', path: '/' },
@@ -26,14 +27,15 @@ export default function Navbar () {
                             <Link
                                 to={item.path}
                                 className={`transition-colors duration-200 ${location.pathname === item.path
-                                        ? 'text-ashGray'
-                                        : 'text-coolGray hover:text-ashGray'
+                                    ? 'text-ashGray'
+                                    : 'text-coolGray hover:text-ashGray'
                                     }`}
                             >
                                 {item.name}
                             </Link>
                         </li>
                     ) )}
+                    <ThemeToggle />
                 </ul>
             </nav>
         </header>

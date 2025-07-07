@@ -1,5 +1,6 @@
 const config = {
     content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
@@ -17,6 +18,12 @@ const config = {
                 primaryLight: "#5EABD6",
                 secondaryLight: "#FFB4B4",
                 accentLight: "#E14434",
+                //spring theme
+                springBg: '#E0F7FA',
+                sunnyPrimary: '#FDD835',
+                coralAccent: '#E14434',
+                mintSecondary: '#A5D6A7',
+                textDark: '#333333',
             },
             backgroundImage: {
                 gradientTop: "linear-gradient(to top, #000814, #001D3D, #003566, #FFC300, #FFFCF2)",
