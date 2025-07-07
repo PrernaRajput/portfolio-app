@@ -7,9 +7,6 @@ body {
   @apply bg-black text-white font-sans;
   scroll-behavior: smooth;
 }
-.flex.flex-col.min-h-screen {
-  background: linear-gradient(135deg, #4d4d4f, #0f0f10);
-}
 
 a {
   @apply transition-colors duration-200;
@@ -31,7 +28,7 @@ body {
   transition: background 1s ease-in-out;
   color: white;
   background-color: #0d0d2b;
-  background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   background-size: cover;
   background-attachment: fixed;
 }

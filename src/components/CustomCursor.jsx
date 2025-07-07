@@ -22,6 +22,7 @@ export default function CustomCursor () {
                 height: '100vh',
                 borderRadius: '0',
                 pointerEvents: 'none',
+                zIndex:'66',
                 background: `radial-gradient(300px at ${position.x}px ${position.y}px, rgba(147, 197, 253, 0.12), transparent 80%)`,
                 transition: 'background 0.1s ease-out',
             }}
