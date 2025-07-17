@@ -10,15 +10,15 @@ export default function About () {
             className={`max-w-4xl mx-auto px-6 py-16 transition-all duration-1000 transform 
                   ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-            <h2 className="text-3xl font-bold text-ashGray mb-6">About Me</h2>
+            <h2 className="text-3xl font-bold text-textHighlight dark:text-textHighlightDark mb-6">About Me</h2>
 
-            <div className="text-antiFlashWhite space-y-5 leading-relaxed">
+            <div className="text-textColor dark:text-textColorDark space-y-5 leading-relaxed">
                 <p>
-                    I’m <span className="text-coolGray font-medium">Prerna Rajput</span>, a front-end developer with 2 years of experience crafting modern,
+                    I’m <span className="dark:text-accentDark text-accentLight font-medium">Prerna Rajput</span>, a front-end developer with 2 years of experience crafting modern,
                     responsive, and accessible user interfaces.
                 </p>
                 <p>
-                    I currently work at <strong className="text-coolGray">AVIZVA</strong> as a Software Development Engineer I. My work involves building reusable UI components,
+                    I currently work at <strong className="dark:text-accentDark text-accentLight">AVIZVA</strong> as a Software Development Engineer I. My work involves building reusable UI components,
                     rich text editors, and scalable frontend architecture using React, TypeScript, and modern CSS tooling.
                 </p>
                 <p>

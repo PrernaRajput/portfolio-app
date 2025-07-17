@@ -15,7 +15,7 @@ export default function App () {
             <CustomCursor />
 
             <Router>
-                <div className="flex flex-col min-h-screen bg-gunmetal text-antiFlashWhite relative z-10">
+                <div className="flex flex-col min-h-screen dark:bg-bodyBgColorDark bg-bodyBgColor text-textColor dark:text-textColorDark relative z-10">
                     <Navbar />
 
                     <main className="flex-grow">

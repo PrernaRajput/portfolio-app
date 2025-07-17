@@ -10,12 +10,14 @@ export default function Projects () {
             className={`max-w-4xl mx-auto px-6 py-16 transition-all duration-1000 transform 
                   ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-            <h2 className="text-3xl font-bold text-ashGray mb-6">Projects</h2>
+            <h2 className="text-3xl font-bold text-textHighlight dark:text-textHighlightDark mb-6">Projects</h2>
 
-            <div className="space-y-10 text-antiFlashWhite">
-                <div className="p-4 rounded-md border border-gunmetal hover:bg-spaceCadet transition duration-300 hover:shadow-lg hover:shadow-ashGray/10">
-                    <h3 className="text-xl font-semibold text-coolGray">Custom CSS Layout Utility Library</h3>
-                    <p className="mt-2 text-sm text-ashGray">
+            <div className="space-y-10 text-textColor dark:text-textColorDark">
+                <div className="p-4 rounded-md border dark:border-bodyBgColorDark border-bodyBgColor
+                dark:hover:bg-navBgColorDark
+                 hover:bg-navBgColor transition duration-300 hover:shadow-lg hover:shadow-textHighlight/10">
+                    <h3 className="text-xl font-semibold dark:text-accentDark text-accentLight">Custom CSS Layout Utility Library</h3>
+                    <p className="mt-2 text-sm text-textHighlight dark:text-textHighlightDark">
                         Technologies: HTML5, CSS3, SASS, Webpack
                     </p>
                     <p className="mt-2">
@@ -30,9 +32,11 @@ export default function Projects () {
                     </p>
                 </div>
 
-                <div className="p-4 rounded-md border border-gunmetal hover:bg-spaceCadet transition duration-300 hover:shadow-lg hover:shadow-ashGray/10">
-                    <h3 className="text-xl font-semibold text-coolGray">Access-Based Fallback Routing System</h3>
-                    <p className="mt-2 text-sm text-ashGray">
+                <div className="p-4 rounded-md border dark:border-bodyBgColorDark border-bodyBgColor
+                dark:hover:bg-navBgColorDark
+                 hover:bg-navBgColor transition duration-300 hover:shadow-lg hover:shadow-textHighlight/10">
+                    <h3 className="text-xl font-semibold dark:text-accentDark text-accentLight">Access-Based Fallback Routing System</h3>
+                    <p className="mt-2 text-sm text-textHighlight dark:text-textHighlightDark">
                         Technologies: React.js, React Router, JavaScript, Redux, RBAC
                     </p>
                     <p className="mt-2">

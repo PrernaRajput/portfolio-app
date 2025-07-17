@@ -5,12 +5,12 @@ export default function Contact () {
     return (
         <>
             <CloudParticles />
-            <section className="max-w-4xl mx-auto px-6 py-16 text-coolGray">
+            <section className="max-w-4xl mx-auto px-6 py-16 dark:text-accentDark text-accentLight">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-3xl font-bold text-ashGray mb-6"
+                    className="text-3xl font-bold text-textHighlight dark:text-textHighlightDark mb-6"
                 >
                     Contact
                 </motion.h2>
@@ -32,9 +32,9 @@ export default function Contact () {
                 >
                     <a
                         href="mailto:prerna.rajput.dev@gmail.com"
-                        className="bg-spaceCadet text-antiFlashWhite px-6 py-3 rounded-md 
-                     hover:bg-ashGray hover:text-gunmetal shadow-md 
-                     hover:shadow-ashGray/30 transition duration-300 ease-in-out text-center"
+                        className="dark:bg-navBgColorDark bg-navBgColor text-textColor dark:text-textColorDark px-6 py-3 rounded-md 
+                     hover:bg-textHighlight dark:hover:bg-textHighlightDark hover:text-bodyBgColor dark:hover:text-bodyBgColorDark shadow-md 
+                     hover:shadow-textHighlight/30 transition duration-300 ease-in-out text-center"
                     >
                         Say Hello! 📧
                     </a>
@@ -43,9 +43,10 @@ export default function Contact () {
                         href="https://wa.me/919354822230"
                         target="_blank"
                         rel="noreferrer"
-                        className="bg-gunmetal text-antiFlashWhite px-6 py-3 rounded-md 
-                     hover:bg-coolGray hover:text-black shadow-md 
-                     hover:shadow-coolGray/30 transition duration-300 ease-in-out text-center"
+                        className="bg-bodyBgColor dark:bg-bodyBgColorDark text-textColor dark:text-textColorDark px-6 py-3 rounded-md 
+                     hover:bg-accentLight hover:text-black shadow-md 
+                      dark:hover:bg-accentDark dark:hover:shadow-accentDark
+                     hover:shadow-accentLight/30 transition duration-300 ease-in-out text-center"
                     >
                         Contact via Text 💬
                     </a>
@@ -54,9 +55,10 @@ export default function Contact () {
                         href="/assets/Prerna-Rajput-Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-ashGray text-gunmetal px-6 py-3 rounded-md 
-                     hover:bg-coolGray hover:text-antiFlashWhite shadow-md 
-                     hover:shadow-ashGray/30 transition duration-300 ease-in-out text-center"
+                        className="bg-textHighlight dark:bg-textHighlightDark dark:text-bodyBgColorDark text-bodyBgColor px-6 py-3 rounded-md 
+                        dark:hover:bg-accentDark
+                     hover:bg-accentLight hover:text-textColor dark:hover:text-textColorDark shadow-md 
+                     hover:shadow-textHighlight/30 transition duration-300 ease-in-out text-center"
                     >
                         View Resume 📂
                     </a>

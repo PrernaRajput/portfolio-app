@@ -8,7 +8,7 @@ export default function Experience () {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-3xl font-bold text-ashGray mb-6"
+                className="text-3xl font-bold text-textHighlight dark:text-textHighlightDark mb-6"
             >
                 Experience
             </motion.h2>
@@ -17,17 +17,21 @@ export default function Experience () {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="space-y-10 text-antiFlashWhite"
+                className="space-y-10 text-textColor dark:text-textColorDark"
             >
                 <motion.div
                     whileHover={{ scale: 1.01 }}
-                    className="p-4 rounded-md border border-gunmetal transition duration-300 
-                     hover:bg-spaceCadet hover:shadow-lg hover:shadow-coolGray/20"
+                    className="p-4 rounded-md border dark:border-bodyBgColorDark border-bodyBgColor transition duration-300 
+                     hover:bg-navBgColor 
+                     dark:hover:bg-navBgColorDark
+                     hover:shadow-lg
+                     dark:hover:shadow-accentDark/20
+                     hover:shadow-accentLight/20"
                 >
-                    <h3 className="text-xl font-semibold text-ashGray">
+                    <h3 className="text-xl font-semibold text-textHighlight dark:text-textHighlightDark">
                         Associate Development Engineer (SDE-I) — AVIZVA
                     </h3>
-                    <p className="text-sm text-coolGray">Jan 2024 – Present · Gurugram, India</p>
+                    <p className="text-sm dark:text-accentDark text-accentLight">Jan 2024 – Present · Gurugram, India</p>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>Built scalable frontend applications using React.js, Redux, and TypeScript.</li>
                         <li>Engineered a custom Rich Text Editor in React, reducing content creation time by 60%.</li>
@@ -42,13 +46,15 @@ export default function Experience () {
 
                 <motion.div
                     whileHover={{ scale: 1.01 }}
-                    className="p-4 rounded-md border border-gunmetal transition duration-300 
-                     hover:bg-spaceCadet hover:shadow-lg hover:shadow-coolGray/20"
+                    className="p-4 rounded-md border dark:border-bodyBgColorDark border-bodyBgColor transition duration-300 
+                     hover:bg-navBgColor 
+                     dark:hover:bg-navBgColorDark
+                     hover:shadow-lg dark:hover:shadow-accentDark/20 hover:shadow-accentLight/20"
                 >
-                    <h3 className="text-xl font-semibold text-ashGray">
+                    <h3 className="text-xl font-semibold text-textHighlight dark:text-textHighlightDark">
                         Trainee Development Engineer — AVIZVA
                     </h3>
-                    <p className="text-sm text-coolGray">Jul 2023 – Jan 2024 · Gurugram, India</p>
+                    <p className="text-sm dark:text-accentDark text-accentLight">Jul 2023 – Jan 2024 · Gurugram, India</p>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>Built reusable React components and styled them with SCSS + utility classes.</li>
                         <li>Enhanced developer onboarding by improving internal documentation.</li>

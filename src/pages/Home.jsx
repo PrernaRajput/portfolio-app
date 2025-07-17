@@ -14,13 +14,13 @@ export default function Home () {
     return (
         <>
             <StarParticles />
-            <main className="min-h-screen bg-gradientRadial text-antiFlashWhite px-6 py-20">
+            <main className="min-h-screen bg-gradientRadial text-textColor dark:text-textColorDark px-6 py-20">
                 <section className="mx-auto flex flex-col gap-4">
                     <motion.p
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-antiFlashWhite"
+                        className="text-textColor dark:text-textColorDark"
                     >
                         Hi, my name is
                     </motion.p>
@@ -29,7 +29,7 @@ export default function Home () {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-5xl font-bold text-coolGray"
+                        className="text-5xl font-bold dark:text-accentDark text-accentLight"
                     >
                         Prerna Rajput.
                     </motion.h1>
@@ -38,7 +38,7 @@ export default function Home () {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-3xl text-ashGray"
+                        className="text-3xl text-textHighlight dark:text-textHighlightDark"
                     >
                         I build accessible, performant front-end applications.
                     </motion.h2>
@@ -47,7 +47,7 @@ export default function Home () {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-antiFlashWhite max-w-2xl"
+                        className="text-textColor dark:text-textColorDark max-w-2xl"
                     >
                         I’m a front-end developer based in Delhi NCR, India. I specialize in building modern React.js
                         applications with great UI/UX. Currently working as a Software Development Engineer at AVIZVA.
@@ -60,10 +60,10 @@ export default function Home () {
                         transition={{ delay: 0.5 }}
                     >
                         <a href="https://github.com/PrernaRajput" target="_blank" rel="noreferrer">
-                            <FaGithub className="w-6 h-6 text-coolGray hover:text-ashGray transition" />
+                            <FaGithub className="w-6 h-6 dark:text-accentDark text-accentLight hover:text-textHighlight dark:hover:text-textHighlightDark transition" />
                         </a>
                         <a href="https://linkedin.com/prerna" target="_blank" rel="noreferrer">
-                            <FaLinkedin className="w-6 h-6 text-coolGray hover:text-ashGray transition" />
+                            <FaLinkedin className="w-6 h-6 dark:text-accentDark text-accentLight hover:text-textHighlight dark:hover:text-textHighlightDark transition" />
                         </a>
 
                         <a
@@ -73,7 +73,7 @@ export default function Home () {
                             rel="noreferrer"
                         >
                             <Button
-                                className="border-ashGray text-ashGray hover:bg-ashGray hover:text-gunmetal"
+                                className="border-textHighlight dark:border-textHighlightDark text-textHighlight dark:text-textHighlightDark hover:bg-textHighlight dark:hover:bg-textHighlightDark dark:hover:text-bodyBgColorDark hover:text-bodyBgColor"
                             >
                                 Get In Touch
                             </Button>

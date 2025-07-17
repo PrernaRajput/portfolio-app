@@ -15,20 +15,20 @@ export default function Navbar () {
     const location = useLocation();
 
     return (
-        <header className="bg-spaceCadet text-antiFlashWhite sticky top-0 z-50 shadow-md border-b border-gunmetal backdrop-blur-md bg-opacity-95">
-            <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <div className="font-bold text-ashGray text-lg tracking-wide">
+        <header className="dark:bg-navBgColorDark bg-navBgColor text-textColor dark:text-textColorDark sticky top-0 z-50 shadow-md border-b dark:border-bodyBgColorDark border-bodyBgColor backdrop-blur-md bg-opacity-95">
+            <nav className="mx-auto px-4 py-4 flex justify-between items-center">
+                <div className="font-bold text-textHighlight dark:text-textHighlightDark text-lg tracking-wide">
                     Prerna Rajput
                 </div>
 
-                <ul className="flex space-x-6 text-sm font-medium">
+                <ul className="flex space-x-6 text-m font-medium">
                     {navItems.map( ( item ) => (
                         <li key={item.path}>
                             <Link
                                 to={item.path}
                                 className={`transition-colors duration-200 ${location.pathname === item.path
-                                    ? 'text-ashGray'
-                                    : 'text-coolGray hover:text-ashGray'
+                                    ? 'text-textHighlight dark:text-textHighlightDark'
+                                    : 'dark:text-accentDark text-accentLight  hover:text-textHighlight dark:hover:text-textHighlightDark'
                                     }`}
                             >
                                 {item.name}
