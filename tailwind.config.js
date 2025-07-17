@@ -13,8 +13,13 @@ const config = {
                 textHighlightDark: "#FFC300",
                 textColorDark: "#FFFCF2",
                 // Light theme
-                // accentLight:"#85C4FF",
-                bodyBgLight: "#ffefcb",
+                accentLight:"#90a9ff",
+                bodyBgColor: "#fde2e8",
+                navBgColor: "#FFFCF2",
+                textHighlight: "#FF38A2",
+                textColor: "#a844f4",
+                //
+                cardBgLight: "#f0f8ff",
                 navBgColorLight: "#a02323f2",
                 textHighlighLight: "#FFC300",
                 textColorLight: "#1E1E1E",
@@ -25,11 +30,6 @@ const config = {
                 mintSecondary: '#A5D6A7',
                 textDark: '#333333',
                 
-                accentLight:"#85C4FF",
-                bodyBgColor: "#ffefcb",
-                navBgColor: "#a02323f2",
-                textHighlight: "#FFC300",
-                textColor: "#1E1E1E",
             },
             backgroundImage: {
                 gradientTop: "linear-gradient(to top, #000814, #001D3D, #003566, #FFC300, #FFFCF2)",

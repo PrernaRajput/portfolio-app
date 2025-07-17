@@ -32,7 +32,12 @@ export default function Skills () {
                         whileHover={{ scale: 1.05 }}
                         className="dark:bg-navBgColorDark bg-navBgColor px-4 py-2 rounded-md text-sm text-center
                         dark:hover:bg-bodyBgColorDark
-                       hover:bg-bodyBgColor hover:shadow-md dark:hover:shadow-accentDark/30 hover:shadow-accentLight/30
+                       hover:bg-bodyBgColor 
+                        dark:hover:text-textHighlightDark
+                       hover:text-textHighlight 
+                       hover:shadow-md
+                    dark:hover:shadow-accentDark/30
+                        hover:shadow-accentLight/30
                        transition duration-300"
                     >
                         {skill}

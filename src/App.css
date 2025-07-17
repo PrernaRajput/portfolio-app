@@ -12,6 +12,12 @@ a {
   @apply transition-colors duration-200;
 }
 
+.height_xl{
+    height: calc(100vh - 132px);
+}
+.minHeightAuto{
+    min-height: unset;
+}
 button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);

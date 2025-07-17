@@ -2,10 +2,10 @@ import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
-export default function CloudParticles () {
-    const init = useCallback( async ( engine ) => {
-        await loadFull( engine );
-    }, [] );
+export default function CloudParticles() {
+    const init = useCallback(async (engine) => {
+        await loadFull(engine);
+    }, []);
 
     return (
         <Particles
@@ -18,45 +18,44 @@ export default function CloudParticles () {
                 },
                 background: {
                     color: {
-                        value: '#0000', // light sky blue
+                        value: '#FFFCF2', // light background for day theme
                     },
                 },
                 particles: {
                     number: {
-                        value: 20,
+                        value: 40,
                         density: {
                             enable: true,
                             area: 800,
                         },
                     },
                     color: {
-                        value: '#ffffff',
+                        value: '#85c4ff', // cloud-like white circles
+                    },
+                    shape: {
+                        type: 'circle',
                     },
                     opacity: {
-                        value: 0.2,
+                        value: 0.3,
                         random: true,
                     },
                     size: {
-                        value: 80,
-                        random: true,
+                        value: 60,
+                        random: {
+                            enable: true,
+                            minimumValue: 30,
+                        },
                     },
                     move: {
                         enable: true,
                         direction: 'top',
                         speed: 0.2,
-                        outMode: 'out',
-                    },
-                    shape: {
-                        type: 'char',
-                        character: {
-                            value: ['🌸', '☀️', '🍃'],
-                            font: 'Verdana',
-                            style: '',
-                            weight: '8',
-                            fill: false,
-                        }
+                        outModes: {
+                            default: 'out',
+                        },
                     },
                 },
+                detectRetina: true,
             }}
         />
     );

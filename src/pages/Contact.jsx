@@ -3,9 +3,9 @@ import CloudParticles from '../components/CloudParticles';
 
 export default function Contact () {
     return (
-        <>
+        <section className='height_xl dark:bg-accentDark bg-accentLight'>
             <CloudParticles />
-            <section className="max-w-4xl mx-auto px-6 py-16 dark:text-accentDark text-accentLight">
+            <section className="minHeightAuto max-w-4xl mx-auto px-6 py-16 dark:text-accentDark text-accentLight bg-cardBgLight rounded-lg shadow-md overflow-hidden transition duration-300">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -64,6 +64,6 @@ export default function Contact () {
                     </a>
                 </motion.div>
             </section>
-        </>
+        </section>
     );
 }

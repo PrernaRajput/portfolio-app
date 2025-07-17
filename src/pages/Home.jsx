@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import StarParticles from '../components/StarParticles';
+import { useSelector } from 'react-redux';
+import CloudParticles from '../components/CloudParticles';
+
 const Button = ( { children, className = '', ...props } ) => (
     <button
         className={`px-4 py-2 rounded border font-medium transition duration-300 ${className}`}
@@ -10,10 +13,12 @@ const Button = ( { children, className = '', ...props } ) => (
     </button>
 );
 
+
 export default function Home () {
+    const theme = useSelector((state) => state.theme.mode);
     return (
         <>
-            <StarParticles />
+            {theme === 'dark' ? <StarParticles /> : <CloudParticles/>}
             <main className="min-h-screen bg-gradientRadial text-textColor dark:text-textColorDark px-6 py-20">
                 <section className="mx-auto flex flex-col gap-4">
                     <motion.p
@@ -73,7 +78,7 @@ export default function Home () {
                             rel="noreferrer"
                         >
                             <Button
-                                className="border-textHighlight dark:border-textHighlightDark text-textHighlight dark:text-textHighlightDark hover:bg-textHighlight dark:hover:bg-textHighlightDark dark:hover:text-bodyBgColorDark hover:text-bodyBgColor"
+                                className="border-textColor dark:bg-accentDark bg-accentLight dark:border-textColor text-textColor dark:text-textColorDark hover:bg-textHighlight dark:hover:bg-textHighlightDark dark:hover:text-bodyBgColorDark hover:text-bodyBgColor"
                             >
                                 Get In Touch
                             </Button>
@@ -83,4 +88,5 @@ export default function Home () {
             </main>
         </>
     );
+
 }
