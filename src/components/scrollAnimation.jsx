@@ -5,18 +5,19 @@ const ScrollAnimation = () => {
   const {scrollYProgress} = useScroll();
 
   // Rocket animation
-  const rocketY = useTransform(scrollYProgress, [0, 1], [-120, 360]);
-  const rocketX = useTransform(scrollYProgress, [0, 1], [80, 80]);
+  const rocketY = useTransform(scrollYProgress, [0, 1], [-120, 430]);
+  const rocketX = useTransform(scrollYProgress, [0, 1], [180, 510]);
   const rocketScale = useTransform(
     scrollYProgress,
-    [0, 0.6, 1],
+    [0.5, 0.9, 1],
     [0.5, 1, 1.15],
   );
 
   //Moon animation
   const moonOpacity = useTransform(scrollYProgress, [0.7, 0.9], [0, 1]);
   const moonScale = useTransform(scrollYProgress, [0.7, 1], [0.95, 1]);
-  const moonY = useTransform(scrollYProgress, [0.7, 0.9], [-50, 425]);
+  const moonY = useTransform(scrollYProgress, [0.7, 0.9], [50, 500]);
+  const moonX = useTransform(scrollYProgress, [0.7, 0.9], [500, 425]);
 
   // Earth Animation
   const earthY = useTransform(scrollYProgress, [0, 1], [-116, -80]);
@@ -46,7 +47,7 @@ const ScrollAnimation = () => {
           viewBox='0 0 800 600'
           xmlns='http://www.w3.org/2000/svg'
         >
-          {/* 🌍 EARTH */}
+          {/*EARTH */}
           <motion.g
             style={{
               y: earthY,
@@ -118,12 +119,13 @@ const ScrollAnimation = () => {
               />
             </svg>
           </motion.g>
-          {/* 🌕 MOON */}
+          {/* MOON */}
           <motion.g
             style={{
               opacity: moonOpacity,
               scale: moonScale,
               y: moonY,
+              x: moonX,
             }}
             transform='translate(60 460) scale(1.2)'
           >
@@ -157,7 +159,7 @@ const ScrollAnimation = () => {
             </svg>
           </motion.g>
 
-          {/* 🚀 ROCKET */}
+          {/* ROCKET */}
           <motion.g
             style={{
               y: rocketY,
