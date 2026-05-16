@@ -1,71 +1,451 @@
-/* src/index.css OR src/App.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-body {
-  @apply bg-black text-white font-sans;
-  scroll-behavior: smooth;
-}
-
-a {
-  @apply transition-colors duration-200;
-}
-
-.height_xl{
-    height: calc(100vh - 132px);
-}
-.minHeightAuto{
-    min-height: unset;
-}
-button:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-a:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  transition: background 1s ease-in-out;
-  color: white;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #0b1120;
+  color: #f8fafc;
+  font-family: Inter, sans-serif;
 }
 
-section {
+html {
+  scroll-behavior: smooth;
+}
+
+.app-shell {
   min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 17, 32, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.hero-section {
+  padding: 8rem 6rem 6rem;
+}
+
+.hero-content {
+  max-width: 1800px;
+}
+
+.eyebrow {
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 1.5rem 0;
+}
+
+.hero-description {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 760px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondary-btn {
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.hero-stats div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 60px 20px;
-  position: relative;
-  z-index: 1;
-  transition: background-color 0.8s ease-in-out;
 }
 
-/* Starfield overlay effect */
-.stars {
-  position: fixed;
-  width: 100%;
+.hero-stats strong {
+  font-size: 2rem;
+}
+
+.hero-stats span {
+  color: #94a3b8;
+}
+
+.section {
+  padding: 6rem;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.section-heading span {
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.section-heading p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.projects-grid,
+.highlight-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card,
+.highlight-card,
+.skills-card,
+.experience-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 24px;
+}
+
+.project-card h3,
+.highlight-card h3,
+.skills-card h3 {
+  margin-top: 1rem;
+}
+
+.project-metric {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.stack-list,
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.stack-list span,
+.skills-list span {
+  background: rgba(37, 99, 235, 0.18);
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.project-card ul,
+.experience-card ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.project-card li,
+.experience-card li {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.icon-wrapper {
+  font-size: 1.8rem;
+  color: #60a5fa;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  .hero-section,
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.case-studies-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.case-study-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  padding: 2.5rem;
+  transition: all 0.25s ease;
+}
+
+.case-study-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.case-study-category {
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.case-study-header h3 {
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.case-study-metrics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.case-study-metrics strong {
+  color: #60a5fa;
+  font-size: 1rem;
+}
+
+.case-study-metrics span {
+  color: #94a3b8;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.case-study-description {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.case-study-section {
+  margin-bottom: 2rem;
+}
+
+.case-study-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.case-study-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-study-section li {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.case-study-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.case-study-highlight {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.12);
+  color: #bfdbfe;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .case-study-header {
+    flex-direction: column;
+  }
+
+  .case-study-metrics {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .case-study-card {
+    padding: 1.5rem;
+  }
+}
+.case-study-swiper {
+  padding-bottom: 4rem;
+}
+
+.case-study-swiper .swiper-slide {
+  height: auto;
+}
+
+.case-study-card {
   height: 100%;
-  background: transparent url("./assets/stars.jpg") no-repeat center center;
-  background-size: cover;
-  z-index: 0;
-  opacity: 0.1;
-  animation: moveStars 200s linear infinite;
 }
 
-@keyframes moveStars {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 10000px;
-  }
+.case-study-swiper .swiper-pagination-bullet {
+  background: #94a3b8;
 }
 
+.case-study-swiper .swiper-pagination-bullet-active {
+  background: #60a5fa;
+}
+
+.case-study-swiper .swiper-button-prev,
+.case-study-swiper .swiper-button-next {
+  color: #60a5fa;
+}
+
+.case-study-swiper .swiper-button-prev::after,
+.case-study-swiper .swiper-button-next::after {
+  font-size: 1.2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 24px;
+  text-decoration: none;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.25s ease;
+}
+
+.contact-card:hover {
+  border-color: rgba(96,165,250,0.4);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(96,165,250,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content span {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-content strong {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+  word-break: break-word;
+}
