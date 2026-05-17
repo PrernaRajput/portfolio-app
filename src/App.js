@@ -406,7 +406,7 @@ const featuredProjects = [
             'Optimized rendering and state synchronization',
         ],
         icon: <FiGithub />,
-        href:'https://github.com/PrernaRajput'
+        href:'https://github.com/PrernaRajput/blog-post-hr'
         
     },
     {
