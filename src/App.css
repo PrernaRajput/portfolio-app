@@ -4,8 +4,7 @@
 
 body {
   margin: 0;
-  background: #0b1120;
-  color: #f8fafc;
+  @apply bg-bodyBgColor text-textColor dark:bg-bodyBgColorDark dark:text-textColorDark transition-colors duration-300;
   font-family: Inter, sans-serif;
 }
 
@@ -15,33 +14,41 @@ html {
 
 .app-shell {
   min-height: 100vh;
+  @apply bg-bodyBgColor text-textColor dark:bg-bodyBgColorDark dark:text-textColorDark transition-colors duration-300;
 }
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 17, 32, 0.92);
+  @apply bg-navBgColor text-textColor dark:bg-navBgColorDark dark:text-textColorDark transition-colors duration-300;
   backdrop-filter: blur(12px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 6rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  @apply border-b border-borderColor dark:border-bodyBgColorDark;
 }
 
 .brand {
   font-size: 1.1rem;
   font-weight: 700;
+  @apply text-textHighlight dark:text-textHighlightDark;
+}
+
+.nav-actions,
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .navbar nav {
-  display: flex;
   gap: 2rem;
 }
 
 .navbar a {
-  color: #cbd5e1;
+  @apply text-accentLight dark:text-accentDark hover:text-textHighlight dark:hover:text-textHighlightDark transition-colors duration-200;
   text-decoration: none;
 }
 
@@ -54,7 +61,7 @@ html {
 }
 
 .eyebrow {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
@@ -67,7 +74,7 @@ html {
 }
 
 .hero-description {
-  color: #94a3b8;
+  @apply text-slate-600 dark:text-slate-300;
   font-size: 1.15rem;
   line-height: 1.8;
   max-width: 760px;
@@ -88,16 +95,14 @@ html {
 }
 
 .primary-btn {
-  background: #2563eb;
-  color: white;
+  @apply bg-accentLight text-white hover:bg-accentDark dark:bg-textHighlightDark dark:text-bodyBgColorDark dark:hover:bg-textHighlight transition-colors duration-200;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .secondary-btn {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: white;
+  @apply border border-borderColor text-textColor hover:border-accentLight hover:text-accentLight dark:border-slate-700 dark:text-textColorDark dark:hover:border-textHighlightDark dark:hover:text-textHighlightDark transition-colors duration-200;
 }
 
 .hero-stats {
@@ -116,7 +121,7 @@ html {
 }
 
 .hero-stats span {
-  color: #94a3b8;
+  @apply text-slate-600 dark:text-slate-400;
 }
 
 .section {
@@ -129,7 +134,7 @@ html {
 }
 
 .section-heading span {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
   text-transform: uppercase;
   font-size: 0.85rem;
 }
@@ -140,7 +145,7 @@ html {
 }
 
 .section-heading p {
-  color: #94a3b8;
+  @apply text-slate-600 dark:text-slate-400;
   line-height: 1.7;
 }
 
@@ -156,8 +161,7 @@ html {
 .highlight-card,
 .skills-card,
 .experience-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  @apply bg-cardBgLight border border-slate-300 text-textColor dark:bg-slate-900 dark:border-slate-800 dark:text-textColorDark transition-colors duration-300;
   padding: 2rem;
   border-radius: 24px;
 }
@@ -169,7 +173,7 @@ html {
 }
 
 .project-metric {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
   font-weight: 700;
 }
 
@@ -183,7 +187,7 @@ html {
 
 .stack-list span,
 .skills-list span {
-  background: rgba(37, 99, 235, 0.18);
+  @apply bg-sky-100 text-accentLight dark:bg-sky-500/10 dark:text-sky-200;
   padding: 0.5rem 0.8rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -201,13 +205,13 @@ html {
   display: flex;
   gap: 0.7rem;
   margin-bottom: 1rem;
-  color: #cbd5e1;
+  @apply text-slate-700 dark:text-slate-300;
   line-height: 1.6;
 }
 
 .icon-wrapper {
   font-size: 1.8rem;
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
 }
 
 .experience-header {
@@ -245,6 +249,10 @@ html {
     display: none;
   }
 
+  .nav-actions {
+    margin-left: auto;
+  }
+
   .hero-content h1 {
     font-size: 2.6rem;
   }
@@ -261,8 +269,7 @@ html {
 }
 
 .case-study-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  @apply bg-cardBgLight border border-slate-300 text-textColor dark:bg-slate-900 dark:border-slate-800 dark:text-textColorDark;
   border-radius: 28px;
   padding: 2.5rem;
   transition: all 0.25s ease;
@@ -277,7 +284,7 @@ html {
 }
 
 .case-study-category {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
@@ -296,18 +303,18 @@ html {
 }
 
 .case-study-metrics strong {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
   font-size: 1rem;
 }
 
 .case-study-metrics span {
-  color: #94a3b8;
+  @apply text-slate-600 dark:text-slate-400;
   margin-top: 0.3rem;
   font-size: 0.9rem;
 }
 
 .case-study-description {
-  color: #cbd5e1;
+  @apply text-slate-700 dark:text-slate-300;
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -331,7 +338,7 @@ html {
   display: flex;
   gap: 0.8rem;
   margin-bottom: 1rem;
-  color: #cbd5e1;
+  @apply text-slate-700 dark:text-slate-300;
   line-height: 1.6;
 }
 
@@ -345,8 +352,7 @@ html {
 .case-study-highlight {
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: rgba(96, 165, 250, 0.12);
-  color: #bfdbfe;
+  @apply bg-sky-100 text-accentLight dark:bg-sky-500/10 dark:text-sky-200;
   font-size: 0.85rem;
 }
 
@@ -381,12 +387,12 @@ html {
 }
 
 .case-study-swiper .swiper-pagination-bullet-active {
-  background: #60a5fa;
+  @apply bg-accentLight dark:bg-textHighlightDark;
 }
 
 .case-study-swiper .swiper-button-prev,
 .case-study-swiper .swiper-button-next {
-  color: #60a5fa;
+  @apply text-accentLight dark:text-textHighlightDark;
 }
 
 .case-study-swiper .swiper-button-prev::after,
@@ -408,8 +414,7 @@ html {
   padding: 1.4rem;
   border-radius: 24px;
   text-decoration: none;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  @apply bg-cardBgLight border border-slate-300 text-textColor dark:bg-slate-900 dark:border-slate-800 dark:text-textColorDark;
   transition: all 0.25s ease;
 }
 
@@ -431,11 +436,10 @@ html {
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  background: rgba(96, 165, 250, 0.12);
+  @apply bg-sky-100 text-accentLight dark:bg-sky-500/10 dark:text-textHighlightDark;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
   font-size: 1.3rem;
   flex-shrink: 0;
 }
@@ -446,13 +450,13 @@ html {
 }
 
 .contact-content span {
-  color: #94a3b8;
+  @apply text-slate-600 dark:text-slate-400;
   font-size: 0.85rem;
   margin-bottom: 0.2rem;
 }
 
 .contact-content strong {
-  color: #f8fafc;
+  @apply text-textColor dark:text-textColorDark;
   font-size: 1rem;
   font-weight: 600;
   word-break: break-word;

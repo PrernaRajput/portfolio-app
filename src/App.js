@@ -1,4 +1,6 @@
 
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import './App.css';
 import { motion } from 'framer-motion';
 import {
@@ -16,6 +18,7 @@ import {
 } from 'react-icons/fi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import ThemeToggle from './components/ThemeToggle';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -509,17 +512,27 @@ function SectionTitle({ eyebrow, title, description }) {
 }
 
 function App() {
+    const themeMode = useSelector((state) => state.theme.mode);
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', themeMode === 'dark');
+    }, [themeMode]);
+
     return (
         <div className="app-shell">
             <header className="navbar">
                 <div className="brand">Prerna Rajput</div>
 
-                <nav>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </nav>
+                <div className="nav-actions">
+                    <nav>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+
+                    <ThemeToggle />
+                </div>
             </header>
 
             <main>
