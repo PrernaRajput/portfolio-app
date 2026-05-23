@@ -14,11 +14,11 @@ const config = {
         // Light theme
         bodyBgColor: "#F8FAFC", // blueprint white
         cardBgLight: "#F1F5F9", // panel background
-        navBgColor: "#E2E8F0", // nav / header
+        navBgColor: "#ededed", // nav / header
         textColor: "#020617", // near-black (precision)
-        accentLight: "#0284C7", // slate-700
-        textHighlight: "#F97316", // signal orange
-        accentDark: "#EA580C", // hover orange
+        accentLight: "#0FA3B1", // slate-700
+        textHighlight: "#FA688C", // signal orange
+        accentDark: "#F05D23", // hover orange
         borderColor: "#94A3B8",
 
         //
