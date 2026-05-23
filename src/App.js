@@ -15,6 +15,11 @@ import {
     FiCheckCircle,
     FiPhone,
     FiMessageCircle,
+    FiCoffee,
+    FiBookOpen,
+    FiEdit3,
+    FiPaperclip,
+    FiMonitor,
 } from 'react-icons/fi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -513,6 +518,7 @@ function SectionTitle({ eyebrow, title, description }) {
 
 function App() {
     const themeMode = useSelector((state) => state.theme.mode);
+    const isDark = themeMode === 'dark';
 
     useEffect(() => {
         document.documentElement.classList.toggle('dark', themeMode === 'dark');
@@ -543,11 +549,29 @@ function App() {
                         transition={{ duration: 0.6 }}
                         className="hero-content"
                     >
-                        <p className="eyebrow">Frontend Engineer • React Specialist • 3 Years Experience</p>
+                        <div className="desk-scene" aria-hidden="true">
+                            <span className="desk-item coffee"><FiCoffee /></span>
+                            <span className="desk-item notebook"><FiBookOpen /></span>
+                            <span className="desk-item laptop"><FiMonitor /></span>
+                            <span className="desk-item pencil"><FiEdit3 /></span>
+                            <span className="desk-item clip"><FiPaperclip /></span>
+                        </div>
+
+                        <p className="eyebrow">
+                            {isDark
+                                ? 'System Online'
+                                : 'Frontend Engineer • React Specialist • 3 Years Experience'}
+                        </p>
 
                         <h1>
-                            Building scalable enterprise React applications with performance-focused architecture,
-                            accessibility-first design systems, and production-grade frontend engineering.
+                            {isDark ? (
+                                <>
+                                    <span>PRERNA RAJPUT</span>
+                                    <span>FRONTEND SYSTEMS ENGINEER</span>
+                                </>
+                            ) : (
+                                'Building scalable enterprise React applications with performance-focused architecture, accessibility-first design systems, and production-grade frontend engineering.'
+                            )}
                         </h1>
 
                         <p className="hero-description">

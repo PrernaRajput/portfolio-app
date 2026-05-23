@@ -9,6 +9,7 @@ const config = {
         //Dark theme
         bodyBgColorDark: "#000814",
         navBgColorDark: "#000003",
+        cardBgDark: "#111827",
         textHighlightDark: "#FFC300",
         textColorDark: "#FFFCF2",
         // Light theme
